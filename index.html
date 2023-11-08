@@ -9,10 +9,11 @@
 <body>
 
 <button> click me</button>
-<audio src="https://upload.wikimedia.org/wikipedia/commons/f/f2/DoorBell_006.ogv"></audio>
+<audio id="bell" src="https://upload.wikimedia.org/wikipedia/commons/f/f2/DoorBell_006.ogv"></audio>
 
-
+<script src="https://cdn.jsdelivr.net/gh/netizenorg/netnet-standard-library/build/nn.min.js"></script>
 <script>
+  
 //javascript written here
 //programming language-not a markup or styling language
 //wikimedia
@@ -22,11 +23,13 @@
 //apis (document gives lots of info, bluetooth, photoshop type beat, javascript to control sheets etc.)
 //script last thing in body, make sure browser gets to html and css first
 //functions:like mini programs
+  //global nn
   function bgChange () {
-     document.body.style.backgroundColor = "darkgreen"
+     document.body.style.backgroundColor = nn.randomColor()
   }
  //variable decleartion: const(can't change) and let(var can change)... var works, but don't use it
- const button = document.querySelector("button")
+ nn.get("button").on("click",bgChange)
+  nn.get("#bell")
  //event based programming-fucntions to diff events
  
 
