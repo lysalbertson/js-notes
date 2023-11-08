@@ -25,7 +25,7 @@
 //functions:like mini programs
   //global nn
   function bgChange () {
-     document.body.style.backgroundColor = nn.randomColor()
+     nn.get("button").style.backgroundColor = nn.randomColor()
     nn.get("#bell").play()
     nn.get("#bell").currentTime = 0
   }
