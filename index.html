@@ -26,10 +26,12 @@
   //global nn
   function bgChange () {
      document.body.style.backgroundColor = nn.randomColor()
+    nn.get("#bell").play()
+    nn.get("#bell").currentTime = 0
   }
  //variable decleartion: const(can't change) and let(var can change)... var works, but don't use it
- nn.get("button").on("click",bgChange)
-  nn.get("#bell")
+ nn.get("button").on("click", bgChange)
+ 
  //event based programming-fucntions to diff events
  
 
